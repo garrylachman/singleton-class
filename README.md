@@ -1,14 +1,16 @@
 # Singleton Class
 
-Singleton class to be extended from to create other singletons
+Gears of Leo Singleton class to be extended from to create other singletons.
+
+Only allows one instance of the singleton to be created
 
 ## Usage
 
-* `npm install --save @leogears/leo-singleton-class`
+* `npm install --save leo-singleton-class`
 * Extend the `Singleton` class with your own
 
 ```javascript
-const Singleton = require('@leogears/leo-singleton-class');
+const Singleton = require('leo-singleton-class');
 
 class MyClass extends Singleton {
   constructor(name){
