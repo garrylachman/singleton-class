@@ -1,0 +1,25 @@
+{
+  "name": "@leogears/leo-singleton-class",
+  "version": "1.0.0",
+  "description": "Singleton pattern",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gutro/leo-singleton-class.git"
+  },
+  "license": "ISC",
+  "scripts": {
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix .",
+    "test": "istanbul cover node_modules/mocha/bin/_mocha -- --full-trace test/* test/**/*",
+    "ci": "istanbul cover _mocha -- -R tap test/* test/**/* > test-results.tap && istanbul report clover"
+  },
+  "devDependencies": {
+    "codestyle": "^15.0.0",
+    "eslint": "^3.3.0",
+    "expect": "^1.20.2",
+    "istanbul": "^0.4.1",
+    "mocha": "^3.0.2",
+    "proxyquire": "^1.7.10"
+  }
+}
