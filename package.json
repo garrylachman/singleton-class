@@ -1,13 +1,20 @@
 {
-  "name": "@leogears/leo-singleton-class",
-  "version": "1.0.0",
-  "description": "Singleton pattern",
+  "name": "leo-singleton-class",
+  "version": "1.0.1",
+  "description": "Singleton pattern used at Gears of Leo",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:gutro/leo-singleton-class.git"
+    "url": "git@github.com:leogears/leo-singleton-class.git"
   },
-  "license": "ISC",
+  "engines": {
+    "node": ">=5.0.0",
+    "npm": ">=3.0.0"
+  },
+  "keywords": [
+    "singleton"
+  ],
+  "license": "MIT",
   "scripts": {
     "lint": "eslint .",
     "lint-fix": "eslint --fix .",
