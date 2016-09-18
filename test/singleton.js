@@ -3,7 +3,7 @@ const expect = require('expect');
 const proxyquire = require('proxyquire').noPreserveCache();
 
 describe('invoking leo-singleton-class', () => {
-  var Singleton;
+  let Singleton;
 
   after(() => {
     proxyquire.preserveCache();

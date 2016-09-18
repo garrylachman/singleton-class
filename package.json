@@ -1,6 +1,6 @@
 {
   "name": "leo-singleton-class",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Singleton pattern used at Gears of Leo",
   "main": "lib/index.js",
   "repository": {
@@ -8,7 +8,7 @@
     "url": "git@github.com:leogears/leo-singleton-class.git"
   },
   "engines": {
-    "node": ">=5.0.0",
+    "node": ">=4.0.0",
     "npm": ">=3.0.0"
   },
   "keywords": [
@@ -19,10 +19,11 @@
     "lint": "eslint .",
     "lint-fix": "eslint --fix .",
     "test": "istanbul cover node_modules/mocha/bin/_mocha -- --full-trace test/* test/**/*",
-    "ci": "istanbul cover _mocha -- -R tap test/* test/**/* > test-results.tap && istanbul report clover"
+    "ci": "istanbul cover _mocha -- -R tap test/* test/**/* > test-results.tap && istanbul report clover",
+    "prepublish": "npm run lint && npm run test"
   },
   "devDependencies": {
-    "codestyle": "^15.0.0",
+    "codestyle": "^16.0.0",
     "eslint": "^3.3.0",
     "expect": "^1.20.2",
     "istanbul": "^0.4.1",
