@@ -1,21 +1,9 @@
 sudo: false
 language: node_js
 node_js:
- - "6"
-
-install:
- - npm install npm -g
- - npm install
-
+ - "4"
 env:
-  - ACTION=lint CXX=g++-4.8
-  - ACTION=test CXX=g++-4.8
-
-script: "npm run $ACTION"
-notifications:
-  email:
-    on_failure: change
-
+  - CXX=g++-4.8
 addons:
   apt:
     sources:
@@ -23,3 +11,13 @@ addons:
     packages:
       - g++-4.8
 
+install:
+ - npm install
+
+script:
+ - npm run lint
+ - npm test
+
+notifications:
+  email:
+    on_failure: change
