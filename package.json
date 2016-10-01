@@ -1,6 +1,6 @@
 {
   "name": "singleton-class",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Singleton pattern enforcing a single instance with a getter",
   "main": "lib/index.js",
   "repository": {
