@@ -6,11 +6,11 @@ Only allows one instance of the singleton to be created
 
 ## Usage
 
-* `npm install --save leo-singleton-class`
+* `npm install --save singleton-class`
 * Extend the `Singleton` class with your own
 
 ```javascript
-const Singleton = require('leo-singleton-class');
+const Singleton = require('singleton-class');
 
 class MyClass extends Singleton {
   constructor(name){
