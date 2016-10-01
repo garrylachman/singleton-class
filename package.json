@@ -1,11 +1,11 @@
 {
-  "name": "leo-singleton-class",
+  "name": "singleton-class",
   "version": "1.0.3",
-  "description": "Singleton pattern used at Gears of Leo",
+  "description": "Singleton pattern enforcing a single instance with a getter",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:leogears/leo-singleton-class.git"
+    "url": "git@github.com:leogears/singleton-class.git"
   },
   "engines": {
     "node": ">=4.0.0",
