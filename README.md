@@ -1,25 +1,26 @@
-# Singleton Class
+# Singleton Class Extended
 
-Gears of Leo Singleton class to be extended from to create other singletons.
+Based on [singleton-class](https://github.com/LeoGears/singleton-class).
+The main change is remove the class initialize (new MyClass). The instance created on first \`instance\` getter call.
+The constructor logic moved to `__initialize` method.
 
 Only allows one instance of the singleton to be created
 
 ## Usage
 
-* `npm install --save singleton-class`
+* `npm install --save singleton-class-extended`
 * Extend the `Singleton` class with your own
 
 ```javascript
-const Singleton = require('singleton-class');
+const Singleton = require('singleton-class-extended');
 
 class MyClass extends Singleton {
-  constructor(name){
-    super();
-    this.name = name;
+  __initialize(){
+    // Use this method as constructor
+    this.name = 'bob';
     // Do other things
   }
 }
 
-const item = new MyClass('bob');
-console.log(item.name); // bob
+console.log(MyClass.instance.name);
 ```

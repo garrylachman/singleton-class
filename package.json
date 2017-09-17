@@ -1,11 +1,11 @@
 {
-  "name": "singleton-class",
-  "version": "1.0.4",
+  "name": "singleton-class-extended",
+  "version": "1.0.5",
   "description": "Singleton pattern enforcing a single instance with a getter",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:leogears/singleton-class.git"
+    "url": "git@github.com:garrylachman/singleton-class-extended.git"
   },
   "engines": {
     "node": ">=4.0.0",

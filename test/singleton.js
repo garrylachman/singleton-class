@@ -14,38 +14,33 @@ describe('invoking leo-singleton-class', () => {
   });
 
   describe('base class', () => {
-    it('should throw an error if no instances have been created', () => {
+    it('should throw an error if creating the instance directly without enforcer', () => {
       expect(function () {
-        const item = Singleton.instance;
+        const instance = new Singleton();
       }).toThrow(Error);
     });
 
-    it('should return the created instance after creating a new one', () => {
-      const mock = new Singleton();
+    it('should return the created instance', () => {
       const item = Singleton.instance;
       expect(typeof item).toEqual('object');
     });
 
-    it('should throw an error if constructor is called a second time', () => {
-      const mock = new Singleton();
-      expect(function () {
-        const item = new Singleton();
-      }).toThrow(Error);
-    });
   });
 
   describe('extend', () => {
     it('should return an instance of the extended class', () => {
       class Mock extends Singleton {
-        constructor(name) {
-          super();
-          this.name = name;
+        __initialize() {
+          this.name = 'mock';
         }
       }
 
-      const item = new Mock('mock');
+      const item = Mock.instance;
       expect(item instanceof Singleton).toEqual(true);
       expect(item.name).toEqual('mock');
+
+      Mock.instance.name = 'mock2';
+      expect(item.name).toEqual('mock2');
     });
   });
 });
