@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:garrylachman/singleton-class-extended.git"
+    "url": "git@github.com:garrylachman/singleton-class.git"
   },
   "engines": {
     "node": ">=4.0.0",
